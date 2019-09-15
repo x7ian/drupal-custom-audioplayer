@@ -1,0 +1,57 @@
+{#
+/**
+ * Default theme implementation for Views to output basic audio player
+ * w/ playlist
+ *
+ * Available variables:
+ * - songs: list of view results
+ *
+ * @see template_preprocess_views_view_audio_player()
+ *
+ * @ingroup themeable
+ */
+#}
+<div id="song-controls" class="collapsed">
+
+  {% for song in songs %}
+    {% if loop.first %}
+      <div id="{{ song.nid }}-song" class="song-text">
+    {% else %}
+      <div id="{{ song.nid }}-song" class="song-text">
+    {% endif %}
+        <div id="top-song-title"><strong>{{ song.title }}</strong></div>
+        <div class="song-lyrics">
+          {{ song.lyrics | raw }}
+        </div>
+    </div>
+  {% endfor %}
+
+
+  <div id="song-playlist">
+    <ul>
+      <li><strong>Playlist</strong></li>
+      {% for song in songs %}
+        {% if loop.first %}
+          <li class="current-song" data-text="{{ song.nid }}-song">
+        {% else %}
+          <li data-text="{{ song.nid }}-song">
+        {% endif %}
+            <a href="{{ song.audio }}">{{ song.title }} <strong> {{ song.singer }}</strong></a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="list-icon-wrapper">
+      <a class="list-icon" title="Playlist">&nbsp;</a>
+      <img src="/themes/contrib/corporate_lite/images/playlist-icon-hover.png" style="display:none">
+    </div>
+  </div>
+
+  <div class="lyrics-icon-wrapper">
+    <a class="lyrics-icon" title="Lyrics">&nbsp;</a>
+    <img src="/themes/contrib/corporate_lite/images/lyrics-icon-hover.png" style="display:none">
+  </div>
+
+  <div id="song-title">{{ first.title }} <strong> {{ first.singer }}</strong></div>
+
+  <audio id="song-audioplayer" src="{{ first.audio }}" controls autoplay></audio>
+</div>

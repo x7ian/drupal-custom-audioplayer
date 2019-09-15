@@ -1,0 +1,12 @@
+audioplayer:
+  version: 1.0.0
+  license:
+    name: GPL
+    gpl-compatible: true
+  js:
+    js/audioplayer.js: {}
+  css:
+    theme:
+      css/audioplayer.css: {}
+  dependencies:
+    - core/drupalSettings

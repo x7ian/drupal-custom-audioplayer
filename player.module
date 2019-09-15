@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains player.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function player_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the player module.
+    case 'help.page.player':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Basic custom music player') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function player_theme() {
+  return [
+    'audio_player' => [
+      'file' => 'player.theme.inc',
+      //'template' => 'audio-player'
+    ],
+  ];
+}

@@ -1,0 +1,7 @@
+name: 'player'
+type: module
+description: 'Basic custom music player'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - views
