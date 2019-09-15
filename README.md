@@ -1,7 +1,7 @@
 # drupal-custom-audioplayer
 
 > A custom audio player that features a playlist and shows the lyrics of songs.
-    ![Simple custom audio player.](https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics_.png)
+<img src="https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics_.png" width="280">    
     
 Features two buttons, one for handling the playlaist and another one to show song lyrics.
 
