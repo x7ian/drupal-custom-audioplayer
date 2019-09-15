@@ -1,3 +1,9 @@
+
+
+.preview-section #song-controls {
+	position: relative;
+}
+
 /* Song Player & Lyrics */
 #song-controls {
 	position: fixed;
@@ -145,7 +151,7 @@
 	float: right;
 }
 .list-icon {
-	background-image: url(/themes/contrib/corporate_lite/images/playlist-icon.png);
+	background-image: url(../images/playlist-icon.png);
 	background-repeat: no-repeat;
 	height: 36px;
 	width: 36px;
@@ -158,7 +164,7 @@ a.list-icon {
 }
 .list-icon:hover,
 .list-icon-active {
-	background-image: url(/themes/contrib/corporate_lite/images/playlist-icon-hover.png);
+	background-image: url(../images/playlist-icon-hover.png);
 }
 
 
@@ -167,7 +173,7 @@ a.list-icon {
 	float: right;
 }
 .lyrics-icon {
-	background-image: url(/themes/contrib/corporate_lite/images/lyrics-icon.png);
+	background-image: url(../images/lyrics-icon.png);
 	background-repeat: no-repeat;
 	display: block;
 	height: 40px;
@@ -181,5 +187,5 @@ a.lyrics-icon {
 }
 .lyrics-icon:hover,
 .lyrics-icon-active {
-	background-image: url(/themes/contrib/corporate_lite/images/lyrics-icon-hover.png);
+	background-image: url(../images/lyrics-icon-hover.png);
 }

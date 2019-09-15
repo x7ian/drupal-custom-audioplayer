@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\player\Plugin\views\style;
+namespace Drupal\audioplayer\Plugin\views\style;
 
 use Drupal\core\form\FormStateInterface;
 use Drupal\views\Plugin\views\style\StylePluginBase;
@@ -64,7 +64,13 @@ class AudioPlayer extends StylePluginBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Four fields defining the playlist. Four user defined field references
+   * between the view and the audioplayer plugin:
+   *   - titlefield
+   *   - singerfield
+   *   - lyricsfield
+   *   - audiofield
+   *
    */
   public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     parent::buildOptionsForm($form, $form_state);

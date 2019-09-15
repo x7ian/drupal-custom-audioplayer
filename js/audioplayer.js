@@ -35,9 +35,10 @@
             $("#" + textId).show();
         });
 
-        $(".list-icon").click(function() {
+        $(".list-icon").click(function(e) {
           $("#song-playlist ul").toggleClass('open');
           $(this).toggleClass('list-icon-active');
+          e.stopPropagation();
         });
 
         $(".lyrics-icon").click(function() {
@@ -50,7 +51,14 @@
           }
           $(this).toggleClass('lyrics-icon-active');
         });
-        //list-icon-wrapper
+
+        $(doc).click(function(event) {
+            if (!$(event.target).is("#song-playlist")) {
+              $("#song-playlist ul").removeClass('open');
+              $(".list-icon").removeClass('list-icon-active');
+            }
+        });
+
     }
     audioPlayer();
 

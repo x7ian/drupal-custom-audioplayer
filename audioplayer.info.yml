@@ -1,0 +1,7 @@
+name: 'audioplayer'
+type: module
+description: 'Basic custom audio player that shows lyrics of songs'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - views

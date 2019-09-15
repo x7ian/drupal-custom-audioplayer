@@ -2,11 +2,7 @@
 
 /**
  * @file
- * Theme for TARDIS views.
- *   Variables:
- *    - songsData: An array containing full songs list.
- *        each array item key pair are fields and values.
- *
+ * Theme for views with audioplayer plugin.
  *
  */
 function template_preprocess_views_view_audio_player(&$variables) {
@@ -15,14 +11,16 @@ function template_preprocess_views_view_audio_player(&$variables) {
   $singerfield = $options['singerfield'];
   $lyricsfield = $options['lyricsfield'];
   $audiofield = $options['audiofield'];
-
-  $field_names = array_keys($variables['view']->getDisplay()->getFieldLabels());
+  $view_fields = array_keys($variables['view']->getDisplay()->getFieldLabels());
   $songsData = [];
   foreach ($variables['rows'] as $id => $row) {
     $fields = $row->_entity->getFields();
-    $rowValues = [];
+    $nid = $row->nid;
+    $rowValues = [
+      'nid' => $nid,
+    ];
     foreach ($fields as $fld=>$field) {
-      if (in_array($fld, $field_names)) {
+      if (in_array($fld, $view_fields)) {
         $fieldValue = $field->getValue($row);
         $type = $field->getFieldDefinition()->getType();
         $value =  NULL;
@@ -39,7 +37,6 @@ function template_preprocess_views_view_audio_player(&$variables) {
           }
         }
         $rowValues[$fld] = $value;
-
       }
     }
     $song = [
@@ -53,6 +50,5 @@ function template_preprocess_views_view_audio_player(&$variables) {
   }
   $variables['first'] = $songsData[0];
   $variables['songs'] = $songsData;
-
-  $variables['#attached']['library'][] = 'player/audioplayer';
+  $variables['#attached']['library'][] = 'audioplayer/audioplayer';
 }

@@ -1,0 +1,47 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * @file
+ * Contains player.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function audioplayer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the player module.
+    case 'help.page.player':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Basic custom music player') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function audioplayer_theme() {
+  return [
+    'audio_player' => [
+      'file' => 'audioplayer.theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_pre_render().
+ * Include dayspan_vuetify libraries whenever a vue_views view is rendered.
+ */
+function audioplayer_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && $view->style_plugin->getBaseId()=='audio_player') {
+    $view->element['#attached']['library'][] = 'audioplayer/audioplayer';
+  }
+}
