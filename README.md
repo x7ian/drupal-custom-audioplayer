@@ -5,7 +5,8 @@
     
 Features two buttons, one for handling the playlaist and another one to show song lyrics.
 
-![Simple custom audioplayer featuring lyrics and playlist.](https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics.png)
+<img src="https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics.png" width="300"> 
+
 
 ## To install 
 
