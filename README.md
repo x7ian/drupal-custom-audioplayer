@@ -12,7 +12,7 @@ This module is intended to be used to solve a particular client use case needs, 
 
 ## To install 
 
-Place the module in any of your project module directories and enable using any of the available methods.
+A usuall with any module, place the module in any of your drupal project module directories and enable using any of the available methods.
     
 ## To configure
     
