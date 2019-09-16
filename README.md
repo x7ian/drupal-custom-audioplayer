@@ -8,7 +8,7 @@ Features two buttons, one for handling the playlaist and another one to show son
 
 <img src="https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics.png" width="450"> 
 
-This module is intended to be used to solve a particular client use case needs, and took as an example for a tutorial about how to build a Views style plugin for Drupal 8.
+This module was originally intended to be used to solve a client use case who needed a player that showed the lyrics of the song that was playing. Latter I took the module as an example for a tutorial about how to build a Views style plugin for Drupal 8.
 
 ## To install 
 
