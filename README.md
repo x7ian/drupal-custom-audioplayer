@@ -1,4 +1,4 @@
-# drupal-custom-audioplayer
+# Drupal Custom Audioplayer with Song Lyrics
 
 > A customized very simple audio player that features a playlist and shows the lyrics of songs.
 
