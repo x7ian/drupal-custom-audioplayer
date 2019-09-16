@@ -1,10 +1,10 @@
-# Drupal Custom Audioplayer with Song Lyrics
+# Drupal Custom Audio Player with Song Lyrics
 
 > A customized very simple audio player that features a playlist and shows the lyrics of songs.
 
 <img src="https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics_.png" width="450">    
     
-Features two buttons, one for handling the playlaist and another one to show song lyrics.
+Features two buttons, one for handling the playlist and another one to show song lyrics.
 
 <img src="https://raw.githubusercontent.com/x7ian/drupal-custom-audioplayer/master/images/audioplayer_playlist_w_lyrics.png" width="450"> 
 
@@ -12,7 +12,7 @@ This module was originally intended to be used to solve a client use case who ne
 
 ## To install 
 
-A usuall with any module, place the module in any of your drupal project module directories and enable using any of the available methods.
+As usual as with any module, place the module in any of your drupal project module directories and enable using any of the available methods.
     
 ## To configure
     
@@ -21,7 +21,7 @@ First you need a content type that has the following fields:
  - another text field for the name of the singer
  - a long text  with format field for the song lyrics.
  - a file field for the song file reference, this file field must accept .mp3 files.
-or you can have this four fields separated in different content types. The important aspect is to gather them in the view configuration. For this exponation we are asuming that this fields are all in a custom content type called Songs.
+or you can have this four fields separated in different content types. The important aspect is to gather them in the view configuration. For this exponation we are assuming that this fields are all in a custom content type called Songs.
  - Next go to Structure > Views > Click on (+ Add View)
    - Give it a name
    - Set to show Content of type Song.
@@ -31,10 +31,10 @@ or you can have this four fields separated in different content types. The impor
    
 ## Configure the View
     
-   - Its important to add all four fields to the view.
-   - Then go to the views Audiplayer format Settings. 
-   - Indicate what fields from the view configuration you have customized are used for each of the simple audioplayer plugin values. Remember to ser a field of each title, song writer, lyrics and audio file.
-    
+   - It's important to add all four fields to the view.
+   - Then go to the views Audio player format Settings. 
+   - Indicate what fields from the view configuration you have customized are used for each of the simple audio player plugin values. Remember to set a field of each of the four fields title, song writer, lyrics and audio file.
+
 Create Block or page views according to your needs. 
 Use filters, relationships and contextual values to configure more complex views according to your requirements.
-Flush cache to make sure the audioplayer works properly.
+Flush Drupal cache to make sure the audioplayer works properly.
