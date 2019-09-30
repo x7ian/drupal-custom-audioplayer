@@ -13,6 +13,7 @@ This module was originally intended to be used to solve a client use case who ne
 ## To install 
 
 As usual as with any module, place the module in any of your drupal project module directories and enable using any of the available methods.
+Please change the name of the folder from "drupal-custom-audioplayer" to just "audioplayer".
     
 ## To configure
     
