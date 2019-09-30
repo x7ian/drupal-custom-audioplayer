@@ -6,6 +6,7 @@
  *
  */
 function template_preprocess_views_view_audio_player(&$variables) {
+  ksm("HI!!");
   $options = $variables['view']->style_plugin->options;
   $titlefield = $options['titlefield'];
   $singerfield = $options['singerfield'];
@@ -51,4 +52,6 @@ function template_preprocess_views_view_audio_player(&$variables) {
   $variables['first'] = $songsData[0];
   $variables['songs'] = $songsData;
   $variables['#attached']['library'][] = 'audioplayer/audioplayer';
+  $variables['module_path'] =  'popo'; //drupal_get_path('module', 'audioplayer');
+  var_dump($variables['module_path']);
 }

@@ -9,6 +9,8 @@ use Drupal\views\ViewExecutable;
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
+\Drupal::moduleHandler()->loadInclude('audioplayer', 'inc', 'audioplayer.theme');
+
 /**
  * Implements hook_help().
  */

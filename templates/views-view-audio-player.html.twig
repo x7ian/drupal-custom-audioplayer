@@ -11,6 +11,7 @@
  * @ingroup themeable
  */
 #}
+{{ kint(songs) }}
 <div id="song-controls" class="collapsed">
 
   {% for song in songs %}
@@ -42,13 +43,14 @@
     </ul>
     <div class="list-icon-wrapper">
       <a class="list-icon" title="Playlist">&nbsp;</a>
-      <img src="/themes/contrib/corporate_lite/images/playlist-icon-hover.png" style="display:none">
+      <img src="{{ module_path }}/images/playlist-icon-hover.png" style="display:none">
     </div>
   </div>
 
   <div class="lyrics-icon-wrapper">
     <a class="lyrics-icon" title="Lyrics">&nbsp;</a>
-    <img src="/themes/contrib/corporate_lite/images/lyrics-icon-hover.png" style="display:none">
+    <img src="{{ module_path }}/images/lyrics-icon-hover.png" style="display:none">
+    lyrics
   </div>
 
   <div id="song-title">{{ first.title }} <strong> {{ first.singer }}</strong></div>
